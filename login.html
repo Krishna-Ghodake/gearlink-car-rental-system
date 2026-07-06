@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GearLink</title>
+    <!-- Use Google Fonts (Cormorant Garamond & Inter) for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=5.0">
+</head>
+<body style="display:flex; justify-content:center; align-items:center; min-height:100vh;">
+    
+    <div class="glass-panel" style="max-width:450px; width:100%; text-align:center;">
+        <h1 class="logo" style="margin-bottom:1rem;">GearLink</h1>
+        <h2 style="margin-bottom:2rem;">Sign In</h2>
+        
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email Address (e.g. admin@gearlink.com)" required>
+            <input type="password" id="password" placeholder="Password (e.g. password123)" required>
+            <button type="submit" class="btn" style="width:100%; margin-top:1rem;">Login</button>
+        </form>
+        
+        <p style="margin-top:2rem; font-size:0.9rem; color:var(--text-secondary);">
+            Don't have an account? <a href="#" style="color:var(--primary-color);">Register here</a>.<br><br>
+            <small><b>Demo Accounts:</b><br>Admin: admin@gearlink.com | User: user@gearlink.com<br>Password: password123</small>
+        </p>
+    </div>
+
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Portal - GearLink</title>
+    <!-- Use Google Fonts (Cormorant Garamond & Inter) for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=5.0">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">GearLink Admin Portal</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Main Site</a></li>
+                <li id="auth-link-container"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 2rem 5%; max-width: 1200px; margin: 0 auto;">
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('analytics')">Financial KPI</button>
+            <button class="tab" onclick="switchTab('fleet')">Fleet Status</button>
+            <button class="tab" onclick="switchTab('requests')">Rental Requests</button>
+            <button class="tab" onclick="switchTab('tracking')">Live Tracking</button>
+            <button class="tab" onclick="switchTab('maintenance')">Maintenance Bay</button>
+            <button class="tab" onclick="switchTab('penalties')">Asset Penalties</button>
+        </div>
+
+        <div id="analytics" class="tab-content active glass-panel">
+            <h3>Global Fleet Analytics</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Automated KPI reporting and utilization matrix.</p>
+            <div id="analyticsContainer" style="margin-top:2rem;"></div>
+        </div>
+
+        <div id="maintenance" class="tab-content glass-panel">
+            <h3>Maintenance & Repair Logistics</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Process and clear pending hardware alerts submitted by digital renters.</p>
+            <div id="maintenanceContainer" style="margin-top:2rem;"></div>
+        </div>
+
+        <div id="fleet" class="tab-content glass-panel">
+            <h3>Active Asset Tracking</h3>
+            <p>Monitor your fleet's live status and utilization.</p>
+            <div id="fleetContainer"></div>
+        </div>
+
+        <div id="tracking" class="tab-content glass-panel">
+            <h3>Advanced Telemetry & GPS</h3>
+            <p>Live tracking and authorized driver logs for active rental assets.</p>
+            <div id="trackingContainer"></div>
+        </div>
+
+        <div id="requests" class="tab-content glass-panel">
+            <h3>Pending Rental Approvals</h3>
+            <div id="requestsContainer"></div>
+        </div>
+
+        <div id="penalties" class="tab-content glass-panel">
+            <h3>Automated Penalty Console</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Simulate automatic late fees based on expected
+                return times.</p>
+            <div id="penaltiesContainer"></div>
+        </div>
+
+    </main>
+
+    <script src="js/db.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin-dash.js"></script>
+</body>
+
+</html>

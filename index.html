@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearLink Car Rental - Premium Fleet</title>
+    <!-- Use Google Fonts (Cormorant Garamond & Inter) for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=5.0">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">GearLink</h1>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#features">Features</a></li>
+                <!-- Dynamic Auth Links -->
+                <li id="auth-link-container">
+                    <a href="login.html" class="btn">Login / Register</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Drive the Future</h2>
+            <p>Experience Active Asset Management. Premium cars. Zero hidden damages. Instant booking transparency.</p>
+            <a href="#cars" class="btn">Explore Fleet</a>
+        </div>
+    </section>
+
+    <section class="cars" id="cars">
+        <h2 class="section-title">Available Cars</h2>
+        <div class="filter-bar glass-panel" style="margin-bottom:2rem; padding:1.5rem; display:flex; gap:1.5rem; flex-wrap:wrap; align-items:flex-end;">
+            <div style="flex:2; min-width:200px;">
+                <label style="display:block; font-size:0.9rem; margin-bottom:0.5rem; font-weight:600; color:var(--primary-color);">Search</label>
+                <input type="text" id="carSearch" placeholder="Model or Brand..." style="width:100%; padding:0.8rem; border-radius:8px; border:1px solid rgba(0,0,0,0.1);">
+            </div>
+            <div style="flex:1; min-width:150px;">
+                <label style="display:block; font-size:0.9rem; margin-bottom:0.5rem; font-weight:600; color:var(--primary-color);">Fuel</label>
+                <select id="filterFuel" style="width:100%; padding:0.8rem; border-radius:8px; border:1px solid rgba(0,0,0,0.1); background:#fff;">
+                    <option value="All">All Fuels</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+            </div>
+            <div style="flex:1; min-width:150px;">
+                <label style="display:block; font-size:0.9rem; margin-bottom:0.5rem; font-weight:600; color:var(--primary-color);">Transmission</label>
+                <select id="filterTrans" style="width:100%; padding:0.8rem; border-radius:8px; border:1px solid rgba(0,0,0,0.1); background:#fff;">
+                    <option value="All">All Types</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+            <div style="flex:1; min-width:150px;">
+                <label style="display:block; font-size:0.9rem; margin-bottom:0.5rem; font-weight:600; color:var(--primary-color);">Seats</label>
+                <select id="filterSeats" style="width:100%; padding:0.8rem; border-radius:8px; border:1px solid rgba(0,0,0,0.1); background:#fff;">
+                    <option value="All">Any Size</option>
+                    <option value="5">5 Seats</option>
+                    <option value="7">7 Seats (SUVs)</option>
+                </select>
+            </div>
+        </div>
+        <!-- Injected by script.js -->
+        <div class="car-grid" id="carsContainer"></div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title">Advanced Systems</h2>
+        <div class="feature-grid">
+            <div class="glass-panel">
+                <h3 style="color:var(--accent-color); margin-bottom:1rem; font-weight:400; font-size:1.6rem; letter-spacing:0.5px;">Digital Smart Key</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Lock, unlock, and trigger telemetry diagnostics directly from your Renter Dashboard with our integrated IoT fob interface.</p>
+            </div>
+            <div class="glass-panel">
+                <h3 style="color:var(--accent-color); margin-bottom:1rem; font-weight:400; font-size:1.6rem; letter-spacing:0.5px;">GearPoints Loyalty</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Earn digital points on every trip. Reach 200 points to unlock VIP Status for an automated 10% base rate discount.</p>
+            </div>
+            <div class="glass-panel">
+                <h3 style="color:var(--accent-color); margin-bottom:1rem; font-weight:400; font-size:1.6rem; letter-spacing:0.5px;">Real-Time Diagnostics</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Instant damage and maintenance reporting directly from your key fob, automatically alerting support teams.</p>
+            </div>
+            <div class="glass-panel">
+                <h3 style="color:var(--accent-color); margin-bottom:1rem; font-weight:400; font-size:1.6rem; letter-spacing:0.5px;">Dynamic Fleet Logistics</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Real-time asset registration, status changes, and vehicle deletions instantly synced to the client portal.</p>
+            </div>
+            <div class="glass-panel">
+                <h3 style="color:var(--accent-color); margin-bottom:1rem; font-weight:400; font-size:1.6rem; letter-spacing:0.5px;">Transparent Audits</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Automated log checks and customized fine deployments (INR) mapped to your account for verified transaction safety.</p>
+            </div>
+            <div class="glass-panel">
+                <h3 style="color:var(--accent-color); margin-bottom:1rem; font-weight:400; font-size:1.6rem; letter-spacing:0.5px;">Telemetry Tracking</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Live coordinate plotting, travel duration meters, and speed capping protocols optimized for passenger privacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 GearLink Smart Car Rental System</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/db.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

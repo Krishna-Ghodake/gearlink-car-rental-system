@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - GearLink</title>
+    <!-- Use Google Fonts (Cormorant Garamond & Inter) for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=5.0">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">GearLink</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- Dynamic Auth Links -->
+                <li id="auth-link-container"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 2rem 5%; max-width: 1200px; margin: 0 auto;">
+        <h2 class="section-title" style="text-align:left; margin-top:0;">Rental Dashboard, <span id="userNameDisplay"
+                style="color:var(--primary-color);"></span></h2>
+                
+        <div id="gearPointsContainer" style="margin-bottom: 2rem;"></div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('booking')">Current Booking Request</button>
+            <button class="tab" onclick="switchTab('history')">Rental History</button>
+            <button class="tab" onclick="switchTab('penalties')">Penalties</button>
+        </div>
+
+        <div id="booking" class="tab-content active glass-panel">
+            <h3>New Booking Request</h3>
+            <div id="bookingFormContainer" style="margin-top:2rem;">
+                <!-- Filled dynamically by js -->
+            </div>
+        </div>
+
+        <div id="history" class="tab-content glass-panel">
+            <h3>Your Rental History</h3>
+            <div id="historyContainer" style="margin-top:2rem;">
+                <p>No active rental requests found.</p>
+            </div>
+        </div>
+
+        <div id="penalties" class="tab-content glass-panel">
+            <h3>Automated Penalty Alerts</h3>
+            <div id="penaltiesContainer" style="margin-top:2rem;">
+                <p>You have no current penalties. Safe driving!</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/db.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/user-dash.js"></script>
+</body>
+
+</html>
