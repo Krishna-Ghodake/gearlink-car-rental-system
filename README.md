@@ -123,27 +123,6 @@ GearLink-Car-Rental-System
 ├── dashboard-admin.html
 └── README.md
 ```
-
----
-
-# 🚀 Run Locally
-
-Clone the repository
-
-```bash
-git clone https://github.com/Krishna-Ghodake/gearlink-car-rental-system.git
-```
-
-Open the project folder
-
-```bash
-cd gearlink-car-rental-system
-```
-
-Launch the application
-
-Open `index.html` in your browser.
-
 ---
 
 # 🎯 Future Improvements
